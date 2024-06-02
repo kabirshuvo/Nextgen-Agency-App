@@ -1,12 +1,35 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import ThemeToggler from "./ThemeToggler";
-import Logo from "./logo";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import { usePathname } from "next/navigation";
+import Logo from "./logo";
+
 const Header = () => {
+  const [header, setHeader] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHeader(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once, after the initial render
+
   return (
-    <header>
+    <header
+      className={`${
+        header
+          ? "py-2 bg-white shadow-lg dark:bg-accent"
+          : "py-4 dark:bg-transparent"
+      } sticky top-0 z-30 transition-all ${pathname === "/" && "bg-[#fef9f5]"}`}
+    >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />
