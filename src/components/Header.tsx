@@ -1,9 +1,12 @@
 import React from "react";
+import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
   return (
     <section>
-      <div>Header Section</div>
+      <div>
+        <ThemeToggler />
+      </div>
     </section>
   );
 };
