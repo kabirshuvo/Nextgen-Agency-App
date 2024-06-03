@@ -1,0 +1,17 @@
+.rotate-360 {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.glow {
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.9);
+  }
+}
