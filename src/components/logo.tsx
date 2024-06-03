@@ -1,7 +1,6 @@
 "use client";
-import "../styles/hero.css";
-// Cannot find module '../styles/hero' or its corresponding type declarations.ts(2307)
 
+import "../styles/hero.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -23,7 +22,7 @@ const Logo = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       />
-      <span className="hover:text-blue-700 font-bold tracking-[2px]">
+      <span className="hover:text-[#6d28d9] font-bold tracking-[2px]">
         Promotopea
       </span>
     </Link>

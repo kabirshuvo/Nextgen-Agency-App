@@ -9,9 +9,9 @@
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    box-shadow: 0 0 10px rgba(132, 0, 255, 0.26);
   }
   100% {
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.9);
+    box-shadow: 0 0 20px rgba(54, 16, 90, 0.26);
   }
 }
