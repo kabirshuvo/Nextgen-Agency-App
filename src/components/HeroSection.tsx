@@ -20,14 +20,20 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex flex-col max-w-[700px] justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Brand Promotion
+            <div>
+              <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
+                Brand Promotion
+              </div>
+              <h1 className="h1 hover:text-popover transition duration-300 ease-in-out transform hover:scale-105 ">
+                Graphic Design & Development
+              </h1>
+              <h1 className="hidden ">Subscribe</h1>
+
+              <p className="subtitle hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
+                From stunning visuals to seamless user experiences, we help you
+                connect with your audience and elevate your online presence.
+              </p>
             </div>
-            <h1 className="h1">Graphic Design & App Development</h1>
-            <p className="subtitle">
-              From stunning visuals to seamless user experiences, we help you
-              connect with your audience and elevate your online presence.
-            </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
                 <Button className="gap-x-2">
