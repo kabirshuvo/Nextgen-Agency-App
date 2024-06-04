@@ -1,7 +1,7 @@
 import React from "react";
 
-import { BriefcaseIcon } from "./AllIcons";
-import { YearsCountUp } from "./AllCountUps";
+import { BriefcaseIcon } from "./BadgeIcons";
+import { YearsCountUp } from "./BadgeCountUps";
 
 interface BadgeProps {
   containerStyles?: string;
@@ -9,7 +9,7 @@ interface BadgeProps {
 
 const ExperienceBadge: React.FC<BadgeProps> = ({ containerStyles }) => {
   return (
-    <div className={`badge ${containerStyles}`}>
+    <div className={`badge badge:hover ${containerStyles}`}>
       <BriefcaseIcon />
       <YearsCountUp />
     </div>

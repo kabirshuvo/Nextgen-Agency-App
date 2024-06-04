@@ -4,13 +4,13 @@ import CountUp from "react-countup";
 
 interface BadgeCountUpProps {
   endCountNum?: number;
-
+  endCountText?: string;
   badgeText?: string;
 }
 
 const BadgeCountUp: React.FC<BadgeCountUpProps> = ({
   endCountNum = 0,
-
+  endCountText,
   badgeText,
 }) => {
   return (
@@ -19,6 +19,7 @@ const BadgeCountUp: React.FC<BadgeCountUpProps> = ({
         {endCountNum !== undefined && (
           <CountUp end={endCountNum} delay={1} duration={4} />
         )}
+        {/* add end countup functionality here */}
       </div>
       <div className="max-w-[70px] leading-none font-sm text-primary text-center text-black font-semibold ">
         {badgeText && <span className="">{badgeText}</span>}

@@ -5,6 +5,7 @@ import {
   RiTeamFill,
   RiTodoFill,
   RiArrowDownSLine,
+  RiMedal2Line,
 } from "react-icons/ri";
 import Icons from "./Icons";
 
@@ -36,6 +37,13 @@ export const ArrowDownSLineIcon = () => {
   return (
     <div>
       <Icons icon={RiArrowDownSLine} />
+    </div>
+  );
+};
+export const RiMedal2LineIcon = () => {
+  return (
+    <div>
+      <Icons icon={RiMedal2Line} />
     </div>
   );
 };

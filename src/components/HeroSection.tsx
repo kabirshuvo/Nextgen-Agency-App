@@ -9,10 +9,13 @@ import {
 } from "react-icons/ri";
 
 import DevImage from "./DevImage";
-import Badge from "./Badge/ExperienceBadge";
+import Badge from "./Badges/ExperienceBadge";
 import Socials from "./Socials";
-import BadgeCountUp from "./Badge/CountUp";
-import ExperienceBadge from "./Badge/ExperienceBadge";
+import BadgeCountUp from "./Badges/CountUp";
+import ExperienceBadge from "./Badges/ExperienceBadge";
+import HappyClientsBadge from "./Badges/HappyClientsBadge";
+import ReviewsBadge from "./Badges/ReviewsBadge";
+import ParticlesComponent from "./testParticals";
 
 const HeroSection = () => {
   return (
@@ -29,7 +32,7 @@ const HeroSection = () => {
               </h1>
               <h1 className="hidden ">Subscribe</h1>
 
-              <p className="subtitle hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
+              <p className="subtitle hover:text-purple-700 transition duration-300 ease-in-out transform hover:scale-105">
                 From stunning visuals to seamless user experiences, we help you
                 connect with your audience and elevate your online presence.
               </p>
@@ -52,11 +55,14 @@ const HeroSection = () => {
           </div>
           {/* right div */}
           <div className="container hidden xl:flex relative">
-            <ExperienceBadge containerStyles="absolute top-[25%] left-[16%] " />
+            <ExperienceBadge containerStyles="absolute top-[15%] -right-[16%] " />
+            <HappyClientsBadge containerStyles="absolute top-[35%] -right-[19%] " />
+            <ReviewsBadge containerStyles="absolute top-[55%] -right-[16%] " />
+
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2">
               <DevImage
                 containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-                imgSrc="/assets/hero/developer.png"
+                imgSrc="/backdropLines.svg"
               />
             </div>
           </div>
@@ -64,6 +70,9 @@ const HeroSection = () => {
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
+      </div>
+      <div className="absolute top-0 left-0 -z-100">
+        {/* <ParticlesComponent /> */}
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RiMedal2LineIcon } from "./Badges/BadgeIcons";
 
 interface ImageProps {
   containerStyles?: string;
@@ -6,7 +7,7 @@ interface ImageProps {
 }
 
 const DevImage: React.FC<ImageProps> = ({ containerStyles = "", imgSrc }) => {
-  const fallbackSrc = "/assets/hero/developer.png";
+  const fallbackSrc = "/backdropLines.svg";
 
   return (
     <div className={`${containerStyles}`}>
