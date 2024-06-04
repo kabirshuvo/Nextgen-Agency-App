@@ -59,7 +59,11 @@
 }
 
 .h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold mb-6;
+  @apply text-3xl sm:text-4xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold mb-6;
+}
+
+.hiddenh1 {
+  @apply text-3xl sm:text-4xl xl:text-[60px] xl:leading-[72px] tracking-[-2px] font-bold mb-6;
 }
 
 .subtitle {
@@ -72,4 +76,11 @@
 
 .badge:hover {
   @apply transform scale-105;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
 }

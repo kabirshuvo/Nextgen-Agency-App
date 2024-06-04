@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/sections/HeroSection";
 import HeroParticles from "@/components/particals/HeroParticals";
 import ParticlesComponent from "@/components/testParticals";
 

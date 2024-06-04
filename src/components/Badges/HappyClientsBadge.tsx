@@ -9,7 +9,7 @@ interface BadgeProps {
 
 const HappyClientsBadge: React.FC<BadgeProps> = ({ containerStyles }) => {
   return (
-    <div className={`badge ${containerStyles}`}>
+    <div className={`badge badge:hover ${containerStyles}`}>
       <TeamFillIcon />
       <HappyClientsCountUp />
     </div>
