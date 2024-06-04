@@ -9,9 +9,10 @@ import {
 } from "react-icons/ri";
 
 import DevImage from "./DevImage";
-import Badge from "./Badge/Badge";
+import Badge from "./Badge/ExperienceBadge";
 import Socials from "./Socials";
 import BadgeCountUp from "./Badge/CountUp";
+import ExperienceBadge from "./Badge/ExperienceBadge";
 
 const HeroSection = () => {
   return (
@@ -43,15 +44,9 @@ const HeroSection = () => {
               iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
             />
           </div>
-          <div className="hidden xl:flex relative">
-            <div className="hidden xl:flex relative">
-              <Badge
-                // icon={RiBriefcase4Fill}
-                endCountNum={16}
-                endCountText="Projects"
-                badgeText="Years of Experience"
-              />
-            </div>
+          {/* right div */}
+          <div className="container hidden xl:flex relative">
+            <ExperienceBadge containerStyles="absolute top-[25%] left-[16%] " />
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2">
               <DevImage
                 containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"

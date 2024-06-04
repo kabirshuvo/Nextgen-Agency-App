@@ -4,31 +4,24 @@ import CountUp from "react-countup";
 
 interface BadgeCountUpProps {
   endCountNum?: number;
-  endCountText?: string;
+
   badgeText?: string;
 }
 
 const BadgeCountUp: React.FC<BadgeCountUpProps> = ({
   endCountNum = 0,
-  endCountText,
+
   badgeText,
 }) => {
   return (
-    // flex flex-row  text-4xl leading-none font-bold text-primary gap-8
-    <div className=" ">
-      <div>
+    <div className=" flex justify-center items-center gap-2">
+      <div className=" flex text-4xl leading-none font-bold text-primary -ml-2">
         {endCountNum !== undefined && (
           <CountUp end={endCountNum} delay={1} duration={4} />
         )}
       </div>
-      {/* flex flex-col gap-4 items-center */}
-      <div className="">
-        {endCountText && (
-          <div className="p-8">
-            <span className="text-xl text-primary">{endCountText}</span>
-          </div>
-        )}
-        {badgeText && <span className="text-xl text-primary">{badgeText}</span>}
+      <div className="max-w-[70px] leading-none font-sm text-primary text-center text-black font-semibold ">
+        {badgeText && <span className="">{badgeText}</span>}
       </div>
     </div>
   );
