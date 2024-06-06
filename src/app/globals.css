@@ -61,6 +61,15 @@
 .h1 {
   @apply text-4xl sm:text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold mb-6;
 }
+.h2 {
+  @apply text-4xl font-bold;
+}
+.h3 {
+  @apply text-3xl font-bold;
+}
+.h4 {
+  @apply text-2xl font-bold;
+}
 
 .hiddenh1 {
   @apply text-3xl sm:text-4xl xl:text-[60px] xl:leading-[72px] tracking-[-2px] font-bold mb-6;
@@ -69,9 +78,16 @@
 .subtitle {
   @apply text-muted-foreground text-lg mb-8 font-light;
 }
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center 
+  justify-between gap-x-3 before:bg-dots_light before:dark:bg-dots_dark 
+  before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px];
+}
 
 .badge {
-  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4 text-primary transition-transform duration-300;
+  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] 
+  shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4 text-primary 
+  transition-transform duration-300;
 }
 
 .badge:hover {

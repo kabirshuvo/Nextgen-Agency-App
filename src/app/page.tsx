@@ -1,16 +1,14 @@
+import AboutSection from "@/components/sections/About";
 import HeroSection from "@/components/sections/HeroSection";
-import HeroParticles from "@/components/particals/HeroParticals";
-import ParticlesComponent from "@/components/testParticals";
 
 export default function Home() {
   return (
-    <main className="relative w-full h-screen overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        {/* <ParticlesComponent /> */}
-        {/* <HeroParticles /> */}
-      </div>
+    <main className="relative w-full overflow-hidden ">
       <div className="relative z-10">
         <HeroSection />
+      </div>
+      <div className="relative h-screen z-10">
+        <AboutSection />
       </div>
     </main>
   );

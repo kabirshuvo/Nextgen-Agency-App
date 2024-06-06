@@ -77,6 +77,8 @@ const config = {
         hero_shape: "url(/assets/hero/shape-1.svg)",
         hero_shape2_light: "url(/assets/hero/shape-2-light.svg)",
         hero_shape2_dark: "url(/assets/hero/shape-2-dark.svg)",
+        dots_light: "url(/assets/dots-light.svg)",
+        dots_dark: "url(/assets/dots-dark.svg)",
       },
     },
   },
