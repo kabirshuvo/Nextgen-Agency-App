@@ -1,5 +1,6 @@
 import AboutSection from "@/components/sections/About";
 import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <AboutSection />
       </div>
       <div className="relative z-10">
-        <AboutSection />
+        <ServicesSection />
       </div>
     </main>
   );
