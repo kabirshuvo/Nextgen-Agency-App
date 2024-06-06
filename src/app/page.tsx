@@ -7,7 +7,10 @@ export default function Home() {
       <div className="relative z-10">
         <HeroSection />
       </div>
-      <div className="relative h-screen z-10">
+      <div className="relative z-10">
+        <AboutSection />
+      </div>
+      <div className="relative z-10">
         <AboutSection />
       </div>
     </main>
