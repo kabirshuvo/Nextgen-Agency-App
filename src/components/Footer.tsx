@@ -9,7 +9,7 @@ const Footer = () => {
             containerStyles="flex gap-x-6 max-auto xl:mx-0 mb-4"
             iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
           />
-          <div className="text-muted-foreground">
+          <div className="text-muted-foreground flex justify-center items-center text-center">
             Copyright &copy; Promotopea. All rights reserved
           </div>
         </div>
