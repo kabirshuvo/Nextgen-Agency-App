@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 import HeroSection from "@/components/sections/HeroSection";
 import PreviousWorks from "@/components/sections/PreviousWorks";
 import Reviews from "@/components/sections/Reviews";
@@ -22,6 +23,9 @@ export default function Home() {
       </div>
       <div className="relative z-10">
         <Reviews />
+      </div>
+      <div className="relative z-10">
+        <Contact />
       </div>
     </main>
   );

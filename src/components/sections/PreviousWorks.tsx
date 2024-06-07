@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import ProjectCard from "@/components/ProjectCard";
 import { Project } from "@/types/types";
 

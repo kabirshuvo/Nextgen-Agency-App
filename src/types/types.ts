@@ -11,3 +11,14 @@ export interface Project {
 export interface ProjectCardProps {
   works: Project;
 }
+
+export interface Review {
+  avatar: string;
+  name: string;
+  job: string;
+  review: string;
+}
+
+export interface ReviewsProps {
+  reviews: Review[];
+}

@@ -1,16 +1,14 @@
-import React from "react";
+import Socials from "./Socials";
 
 const Footer = () => {
   return (
-    <section className="mb-24">
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-      <h1 className="text-5xl text-primary">Footer Section</h1>
-    </section>
+    <footer className="bg-primary/20 py-16">
+      <div className="container mx-auto">
+        <div>
+          <Socials />
+        </div>
+      </div>
+    </footer>
   );
 };
 
