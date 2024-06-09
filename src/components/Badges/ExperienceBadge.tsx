@@ -10,7 +10,9 @@ interface BadgeProps {
 const ExperienceBadge: React.FC<BadgeProps> = ({ containerStyles }) => {
   return (
     <div className={`badge badge:hover ${containerStyles}`}>
-      <BriefcaseIcon />
+      <div className="-ml-2">
+        <BriefcaseIcon />
+      </div>
       <YearsCountUp />
     </div>
   );

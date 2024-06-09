@@ -2,13 +2,23 @@ import React from "react";
 import BadgeCountUp from "./CountUp";
 
 export const YearsCountUp = () => {
-  return <BadgeCountUp endCountNum={16} badgeText="Years of Experience" />;
+  return (
+    <BadgeCountUp
+      endCountNum={16}
+      endCountText="K"
+      badgeText="Years of Experience"
+    />
+  );
 };
 
 export const HappyClientsCountUp = () => {
-  return <BadgeCountUp endCountNum={5} badgeText=" Happy Clients" />;
+  return (
+    <BadgeCountUp endCountNum={5} endCountText="K" badgeText=" Happy Clients" />
+  );
 };
 
 export const ReviewsCountUp = () => {
-  return <BadgeCountUp endCountNum={1} badgeText=" Reviews" />;
+  return (
+    <BadgeCountUp endCountNum={1} endCountText="K+" badgeText=" Reviews" />
+  );
 };
