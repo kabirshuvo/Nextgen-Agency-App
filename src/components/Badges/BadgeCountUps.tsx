@@ -19,6 +19,6 @@ export const HappyClientsCountUp = () => {
 
 export const ReviewsCountUp = () => {
   return (
-    <BadgeCountUp endCountNum={1} endCountText="K+" badgeText=" Reviews" />
+    <BadgeCountUp endCountNum={2} endCountText="K+" badgeText=" Reviews" />
   );
 };

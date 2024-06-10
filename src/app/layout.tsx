@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import AuthProvider from "@/context/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <AuthProvider>
+        <body className={inter.className}>
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </AuthProvider>
     </html>
   );
 }
