@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import AuthButton from "./AuthButton";
 
 const links = [
   { path: "/", name: "home" },
@@ -41,6 +42,7 @@ const Nav: React.FC<NavProps> = ({
           {link.name}
         </Link>
       ))}
+      <AuthButton />
     </div>
   );
 };
