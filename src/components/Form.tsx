@@ -25,6 +25,11 @@ const Form = () => {
         message,
       });
       setResponseMessage(response.data.message);
+
+      // Clear all the fields
+      setName("");
+      setEmail("");
+      setMessage("");
     } catch (error) {
       console.error("Error submitting form:", error);
       setResponseMessage(
@@ -39,7 +44,7 @@ const Form = () => {
     <form onSubmit={handleSubmit} className="flex flex-col gap-y-4">
       <div className="relative flex items-center">
         <Input
-          type="name"
+          type="text" // Use "text" instead of "name"
           id="name"
           placeholder="Name"
           value={name}
@@ -62,7 +67,7 @@ const Form = () => {
       <div className="relative flex items-center">
         <Textarea
           id="textarea"
-          placeholder="Write Your Reason"
+          placeholder="Write Your Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required

@@ -1,3 +1,5 @@
+//auth\[...nextauth]options.ts
+
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -50,6 +52,7 @@ export const authOptions: NextAuthOptions = {
         token.isVerified = user.isVerified;
         token.isAcceptingMessages = user.isAcceptingMessages;
         token.username = user.username;
+        token.isAdmin = user.isAdmin; // Add isAdmin property
       }
       return token;
     },
@@ -59,6 +62,7 @@ export const authOptions: NextAuthOptions = {
         session.user.isVerified = token.isVerified;
         session.user.isAcceptingMessages = token.isAcceptingMessages;
         session.user.username = token.username;
+        session.user.isAdmin = token.isAdmin; // Add isAdmin property
       }
       return session;
     },

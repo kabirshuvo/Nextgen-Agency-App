@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     await newMessage.save();
 
     return NextResponse.json(
-      { success: true, message: "Message saved successfully" },
+      { success: true, message: "Message sent successfully" },
       { status: 200 }
     );
   } catch (error) {
