@@ -3,18 +3,19 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-
-// Define the type for a message
-interface Message {
-  _id: string;
-  name: string;
-  email: string;
-  message: string;
-}
+import { Button } from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export default function AdminMessages() {
   const { data: session, status } = useSession();
-  const [messages, setMessages] = useState<Message[]>([]); // Use the Message type for the state
+  const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -31,6 +32,14 @@ export default function AdminMessages() {
     fetchMessages();
   }, [session]);
 
+  const handleMarkAsRead = (id: string) => {
+    // Implement mark as read functionality here
+  };
+
+  const handleDelete = (id: string) => {
+    // Implement delete functionality here
+  };
+
   if (status === "loading") {
     return <p>Loading...</p>;
   }
@@ -40,23 +49,41 @@ export default function AdminMessages() {
   }
 
   return (
-    <div>
-      <h1>Contact Messages</h1>
-      <ul>
-        {messages.map((message) => (
-          <li key={message._id}>
-            <p>
-              <strong>Name:</strong> {message.name}
-            </p>
-            <p>
-              <strong>Email:</strong> {message.email}
-            </p>
-            <p>
-              <strong>Message:</strong> {message.message}
-            </p>
-          </li>
-        ))}
-      </ul>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Contact Messages</h1>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Sl:</TableHead>
+            <TableHead>Name</TableHead>
+            <TableHead>Message</TableHead>
+            <TableHead>Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {messages.map((message: any, index: number) => (
+            <TableRow key={message._id}>
+              <TableCell>{index + 1}</TableCell>
+              <TableCell>{message.name}</TableCell>
+              <TableCell>{message.message}</TableCell>
+              <TableCell>
+                <Button
+                  onClick={() => handleMarkAsRead(message._id)}
+                  className="mr-2"
+                >
+                  Mark as Read
+                </Button>
+                <Button
+                  onClick={() => handleDelete(message._id)}
+                  variant="destructive"
+                >
+                  Delete
+                </Button>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 }

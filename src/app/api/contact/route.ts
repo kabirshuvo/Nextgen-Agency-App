@@ -1,31 +1,46 @@
 import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/dbConnect";
-import Message from "@/models/contactMessage.model";
+import MessageModel from "@/models/Message.model"; // Make sure you have a Message model
+import UserModel from "@/models/User.model"; // Assuming you are using User model for creating new users
 
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
   await dbConnect();
 
-  const { name, email, message } = await req.json();
-
-  if (!name || !email || !message) {
-    return NextResponse.json(
-      { success: false, message: "All fields are required" },
-      { status: 400 }
-    );
-  }
-
   try {
-    const newMessage = new Message({ name, email, message });
+    const { name, email, message } = await request.json();
+
+    const newMessage = new MessageModel({
+      name,
+      email,
+      message,
+      createdAt: new Date(),
+    });
+
     await newMessage.save();
 
-    return NextResponse.json(
-      { success: true, message: "Message sent successfully" },
-      { status: 200 }
-    );
+    return NextResponse.json({
+      success: true,
+      message: "Message saved successfully",
+    });
   } catch (error) {
     console.error("Error saving message:", error);
     return NextResponse.json(
-      { success: false, message: "Server Error" },
+      { success: false, message: "Error saving message" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET(request: NextRequest) {
+  await dbConnect();
+
+  try {
+    const messages = await MessageModel.find().sort({ createdAt: -1 }).exec();
+    return NextResponse.json({ success: true, messages });
+  } catch (error) {
+    console.error("Error fetching messages:", error);
+    return NextResponse.json(
+      { success: false, message: "Error fetching messages" },
       { status: 500 }
     );
   }
