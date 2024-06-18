@@ -13,10 +13,12 @@ export interface ProjectCardProps {
 }
 
 export interface Review {
+  // [x: string]: number;
   avatar: string;
   name: string;
   job: string;
   review: string;
+  rating: number;
 }
 
 export interface ReviewsProps {

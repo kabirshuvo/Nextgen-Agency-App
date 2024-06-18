@@ -14,10 +14,10 @@ const ContactPage = () => {
             <h1 className="h1 max-w-md mb-8">Let&apos;s Grow Together.</h1>
             <p className="subtitle max-w-[400px]">
               {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-              minima incidunt. A ipsum, qui quod velit obcaecati dolorum maiores
-              ducimus repudiandae animi deserunt quisquam fugit at quaerat sint
-              odio eaque!
+              Get in touch with us today to discuss your project needs, ask
+              questions, or request a quote. We&apos;re here to help you achieve
+              your goals and bring your ideas to life. Fill out the form below,
+              and our team will get back to you as soon as possible.
             </p>
           </div>
           <div className="hidden md:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>

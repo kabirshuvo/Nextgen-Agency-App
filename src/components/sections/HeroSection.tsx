@@ -38,7 +38,7 @@ const HeroSection = () => {
             <HappyClientsBadge containerStyles="absolute top-[35%] -right-[9%] " />
             <ReviewsBadge containerStyles="absolute top-[55%] -right-[6%] " />
 
-            <div>
+            <div className="flex justify-center items-center">
               <video
                 className="rounded-full object-cover"
                 src="/assets/videos/earthFromSpace.mp4"

@@ -29,31 +29,31 @@ type ServiceDataItem = {
 const infoData = [
   {
     icon: <User2 size={20} />,
-    text: "Team Forest",
+    text: "Team build at 2011",
   },
   {
     icon: <MailIcon size={20} />,
-    text: "Team Forest",
+    text: "promotopea11@gmail.com",
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "Team Forest",
+    text: "Dhaka, Bangladesh",
   },
   {
     icon: <PhoneCall size={20} />,
-    text: "Team Forest",
+    text: "+8801717515631",
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "Team Forest",
+    text: "World class certifications",
   },
   {
     icon: <Calendar size={20} />,
-    text: "Team Forest",
+    text: "On time delivery",
   },
   {
     icon: <Briefcase size={20} />,
-    text: "Team Forest",
+    text: "On budget happy services",
   },
 ];
 
@@ -170,13 +170,10 @@ const AboutSection = () => {
 
       <div className="flex flex-col xl:flex-row gap-8">
         <div className="hidden xl:flex flex-1 relative justify-center items-center">
-          <div
-          // className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2 rounded-full"
-          >
+          <div>
             <video
-              // className="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom "
               className="rounded-full object-cover"
-              src="/assets/videos/earthFromSpace.mp4"
+              src="/assets/videos/teamMeeting.mp4"
               autoPlay
               loop
               muted
@@ -228,10 +225,8 @@ const AboutSection = () => {
                     Our Experienced Services
                   </h3>
                   <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Magni culpa molestias, facilis eaque sint a eos? Voluptates
-                    nobis quam sed architecto tenetur, ratione ullam alias iste
-                    quos illo sit voluptas!
+                    Transforming visions into reality with top-notch services
+                    that elevate your business and ignite your success journey.
                   </p>
                   <div>
                     <div className="flex gap-x-4 items-center h4 text-primary">
@@ -281,10 +276,9 @@ const AboutSection = () => {
                     Our Skills and Technologies
                   </h3>
                   <p className="subtitle">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Sunt, iure repellendus? Necessitatibus aliquid quis beatae,
-                    voluptas porro ad delectus eum a itaque, non corrupti cumque
-                    deserunt commodi esse ipsa! Error?
+                    Empowering your growth with expert skills that drive
+                    innovation, efficiency, and excellence in every project we
+                    undertake.
                   </p>
                   <div className="grid xl:grid-cols-2 gap-4">
                     {experiencesData.map((experience, index) => (

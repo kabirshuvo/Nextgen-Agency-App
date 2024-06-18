@@ -7,51 +7,63 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "@/components/ProjectCard";
 import { Review } from "@/types/types";
-import { Card, CardHeader, CardDescription, CardTitle } from "../ui/card";
+import {
+  Card,
+  CardHeader,
+  CardDescription,
+  CardTitle,
+  CardFooter,
+} from "../ui/card";
 import Image from "next/image";
-
+import { StarIcon } from "lucide-react";
 const reviewsData: Review[] = [
   {
     avatar: "/assets/reviews/avatar-1.png",
-    name: "Richard Thomson",
+    name: "Emily R.",
     job: "Film Producer",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste ut qui eveniet eius. Aliquid, delectus. Itaque, adipisci aliquid.",
+      "The graphic design team exceeded our expectations. They created visually stunning designs that perfectly captured our brand's essence. Highly recommended!",
+    rating: 5,
   },
   {
     avatar: "/assets/reviews/avatar-2.png",
-    name: "Richard Thomson",
-    job: "Film Producer",
+    name: "Mark S.",
+    job: "CEO",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste ut qui eveniet eius. Aliquid, delectus. Itaque, adipisci aliquid.",
+      "Our new website is fantastic! The web design team delivered a user-friendly, aesthetically pleasing site that has received great feedback from our clients.",
+    rating: 5,
   },
   {
     avatar: "/assets/reviews/avatar-3.png",
-    name: "Richard Thomson",
-    job: "Film Producer",
+    name: "James L.",
+    job: "Asset Manager",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste ut qui eveniet eius. Aliquid, delectus. Itaque, adipisci aliquid.",
+      "The app development service was top-notch. The team was professional, responsive, and delivered an app that surpassed our expectations. Great work!",
+    rating: 5,
   },
   {
     avatar: "/assets/reviews/avatar-4.png",
-    name: "Richard Thomson",
-    job: "Film Producer",
+    name: "Sarah M.",
+    job: "CEO",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste ut qui eveniet eius. Aliquid, delectus. Itaque, adipisci aliquid.",
+      "The content creation service was exceptional. The team produced high-quality, engaging content that resonated well with our audience. We'll definitely use their services again.",
+    rating: 5,
   },
   {
     avatar: "/assets/reviews/avatar-5.png",
-    name: "Richard Thomson",
-    job: "Film Producer",
+    name: "David K.",
+    job: "Business Man",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste ut qui eveniet eius. Aliquid, delectus. Itaque, adipisci aliquid.",
+      "Our email campaigns have never looked better. The email design and development team created beautiful, responsive emails that boosted our engagement rates significantly.",
+    rating: 5,
   },
   {
     avatar: "/assets/reviews/avatar-6.png",
-    name: "Richard Thomson",
-    job: "Film Producer",
+    name: "Amanda B.",
+    job: "Managing Dirrector",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non iste ut qui eveniet eius. Aliquid, delectus. Itaque, adipisci aliquid.",
+      "The SEO service has been a game-changer for our business. We've seen a substantial increase in organic traffic and our search engine rankings have improved dramatically.",
+    rating: 5,
   },
 ];
 
@@ -91,6 +103,12 @@ const Reviews = () => {
                     </div>
                   </CardHeader>
                   <CardDescription>{reviewer.review}</CardDescription>
+                  <CardFooter className="flex gap-x-1 items-center mt-4">
+                    {/* Display stars based on the rating */}
+                    {Array.from({ length: reviewer.rating }, (_, i) => (
+                      <StarIcon key={i} size={18} className="text-primary" />
+                    ))}
+                  </CardFooter>
                 </Card>
               </SwiperSlide>
             );
