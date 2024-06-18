@@ -8,6 +8,7 @@ import ExperienceBadge from "../Badges/ExperienceBadge";
 import HappyClientsBadge from "../Badges/HappyClientsBadge";
 import ReviewsBadge from "../Badges/ReviewsBadge";
 import HeroTexts from "./HeroTexts";
+import OffersButton from "../buttons/OffersButton";
 
 const HeroSection = () => {
   return (
@@ -23,9 +24,7 @@ const HeroSection = () => {
                 </Button>
               </Link>
 
-              <Button variant="outline" className="gap-x-2">
-                Download Offers <Download size={18} />
-              </Button>
+              <OffersButton />
             </div>
             <Socials
               containerStyles="flex gap-x-4 mx-auto xl:mx-0"

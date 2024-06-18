@@ -69,7 +69,7 @@ const reviewsData: Review[] = [
 
 const Reviews = () => {
   return (
-    <section className="my-12 xl:my-32">
+    <section className="my-12 xl:my-32 bg-blueSun bg-no-repeat">
       <div className="container mx-auto">
         <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
         <Swiper

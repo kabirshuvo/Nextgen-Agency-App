@@ -88,6 +88,7 @@ const config = {
         contact_illustration_light:
           "url(/assets/contact/illustration-light.svg)",
         contact_illustration_dark: "url(/assets/contact/illustration-dark.svg)",
+        blueSun: "url(/assets/blueSun.svg)",
       },
     },
   },
