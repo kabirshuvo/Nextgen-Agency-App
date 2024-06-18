@@ -27,7 +27,9 @@ const HeroSection = () => {
 
               <OffersButton />
             </div>
-            <Brands />
+            <div className="hidden md:flex">
+              <Brands />
+            </div>
           </div>
           {/* right div */}
           <div className="container hidden xl:flex relative">
