@@ -168,12 +168,21 @@ const AboutSection = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col xl:flex-row">
-        <div className="hidden xl:flex flex-1 relative">
-          <DevImage
-            containerStyles="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[505px] h-[505px] bg-no-repeat relative"
-            imgSrc="/backdropLines.svg"
-          />
+      <div className="flex flex-col xl:flex-row gap-8">
+        <div className="hidden xl:flex flex-1 relative justify-center items-center">
+          <div
+          // className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2 rounded-full"
+          >
+            <video
+              // className="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom "
+              className="rounded-full object-cover"
+              src="/assets/videos/earthFromSpace.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
         </div>
 
         <div className="flex-1">

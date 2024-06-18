@@ -3,7 +3,6 @@ import { Button } from "../ui/button";
 import { Download, Send } from "lucide-react";
 import { RiArrowDownSLine } from "react-icons/ri";
 
-import DevImage from "../DevImage";
 import Socials from "../Socials";
 import ExperienceBadge from "../Badges/ExperienceBadge";
 import HappyClientsBadge from "../Badges/HappyClientsBadge";
@@ -39,10 +38,14 @@ const HeroSection = () => {
             <HappyClientsBadge containerStyles="absolute top-[35%] -right-[9%] " />
             <ReviewsBadge containerStyles="absolute top-[55%] -right-[6%] " />
 
-            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2">
-              <DevImage
-                containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-                imgSrc="/backdropLines.svg"
+            <div>
+              <video
+                className="rounded-full object-cover"
+                src="/assets/videos/earthFromSpace.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
               />
             </div>
           </div>

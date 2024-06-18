@@ -97,6 +97,12 @@ export default function SignInForm() {
           </form>
         </Form>
         <div className="text-center mt-4">
+          <Button className="w-full my-2" onClick={() => signIn("google")}>
+            Sign In with Google
+          </Button>
+          <Button className="w-full my-2" onClick={() => signIn("github")}>
+            Sign In with GitHub
+          </Button>
           <p>
             Not a member yet?{" "}
             <Link
