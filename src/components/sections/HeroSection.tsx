@@ -9,6 +9,7 @@ import HappyClientsBadge from "../Badges/HappyClientsBadge";
 import ReviewsBadge from "../Badges/ReviewsBadge";
 import HeroTexts from "./HeroTexts";
 import OffersButton from "../buttons/OffersButton";
+import Brands from "../Brands";
 
 const HeroSection = () => {
   return (
@@ -26,10 +27,7 @@ const HeroSection = () => {
 
               <OffersButton />
             </div>
-            <Socials
-              containerStyles="flex gap-x-4 mx-auto xl:mx-0"
-              iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
-            />
+            <Brands />
           </div>
           {/* right div */}
           <div className="container hidden xl:flex relative">
