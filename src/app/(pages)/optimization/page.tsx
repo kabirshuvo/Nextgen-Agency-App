@@ -41,7 +41,7 @@ const OptimizationsPage = () => {
       <h1 className="text-4xl font-bold mb-8">Our Optimizations</h1>
       <ul>
         {optimizations.map((optimization: Optimization) => (
-          <li key={optimization.id} className="mb-6">
+          <li key={optimization._id} className="mb-6">
             <h2 className="text-2xl font-semibold">{optimization.title}</h2>
             <p>{optimization.description}</p>
           </li>
