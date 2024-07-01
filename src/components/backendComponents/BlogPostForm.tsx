@@ -9,10 +9,10 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Button } from "../ui/button";
 
 const BlogPostForm = () => {
   const [title, setTitle] = useState("");
