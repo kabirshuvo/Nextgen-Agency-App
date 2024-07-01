@@ -41,7 +41,7 @@ const DevelopmentsPage = () => {
       <h1 className="text-4xl font-bold mb-8">Our Developments ...</h1>
       <ul>
         {developments.map((development: Development) => (
-          <li key={development.id} className="mb-6">
+          <li key={development._id} className="mb-6">
             <h2 className="text-2xl font-semibold">{development.title}</h2>
             <p>{development.description}</p>
           </li>
