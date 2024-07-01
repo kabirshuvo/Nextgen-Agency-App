@@ -39,7 +39,7 @@ const DesignsPage = () => {
 
   return (
     <div className="container mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-8">Our Designs</h1>
+      <h1 className="text-4xl font-bold mb-8">Our Designs...</h1>
       <ul>
         {designs.map((design: Design) => (
           <li key={design._id} className="mb-6">
