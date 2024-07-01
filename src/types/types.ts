@@ -29,7 +29,7 @@ export interface ReviewsProps {
 
 export interface BlogPost {
   _id: string;
-  slug: string;
+  id?: string;
   title: string;
   summary: string;
   content: string;
