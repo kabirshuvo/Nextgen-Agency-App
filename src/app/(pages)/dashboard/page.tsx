@@ -1,4 +1,4 @@
-import BlogPostForm from "@/components/BlogPostForm";
+import BlogPostForm from "@/components/backendComponents/BlogPostForm";
 import { BarChartHorizontal } from "lucide-react";
 
 const Dashboard = () => {
