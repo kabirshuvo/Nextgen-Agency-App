@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import dynamic from "next/dynamic";
 import {
   Card,
   CardHeader,
@@ -9,10 +10,14 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+// Dynamically import React Quill to avoid SSR issues
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+import "react-quill/dist/quill.snow.css"; // import styles
 import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
 
 const BlogPostForm = () => {
   const [title, setTitle] = useState("");
@@ -104,11 +109,11 @@ const BlogPostForm = () => {
               >
                 Content
               </Label>
-              <Textarea
+              <ReactQuill
                 id="content"
                 value={content}
-                onChange={(e) => setContent(e.target.value)}
-                required
+                onChange={setContent}
+                theme="snow"
                 className="mt-1 block w-full"
               />
             </div>
