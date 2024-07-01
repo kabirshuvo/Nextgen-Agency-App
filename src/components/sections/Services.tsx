@@ -72,7 +72,7 @@ const ServicesSection = () => {
                 key={index}
               >
                 <CardHeader className="text-primary absolute -top-[60px] left-4">
-                  <div className="w-[140px] h-[80px] bg-pink-200 dark:bg-background flex justify-center items-center">
+                  <div className="w-[140px] h-[80px] bg-transparent rounded-full dark:bg-background flex justify-center items-center">
                     {s.image}
                   </div>
                   <CardTitle>{s.title}</CardTitle>

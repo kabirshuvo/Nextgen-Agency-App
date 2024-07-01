@@ -16,7 +16,7 @@ const HeroSection = () => {
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
-          <div className="flex flex-col max-w-[700px] justify-center mx-auto xl:mx-0 text-center xl:text-left">
+          <div className="flex flex-col gap-8 max-w-[700px] justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <HeroTexts />
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
@@ -49,7 +49,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
+        <div className="hidden md:flex absolute left-2/4 bottom-24 xl:bottom-4 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
       </div>

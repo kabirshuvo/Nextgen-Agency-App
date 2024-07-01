@@ -1,3 +1,5 @@
+import { Key } from "readline";
+
 // types.ts
 export interface Project {
   image: string;
@@ -23,4 +25,29 @@ export interface Review {
 
 export interface ReviewsProps {
   reviews: Review[];
+}
+
+export interface BlogPost {
+  _id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  content: string;
+  imageUrl: string;
+}
+export interface Design {
+  _id: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+}
+export interface Development {
+  _id: string;
+  title: string;
+  description: string;
+}
+export interface Optimization {
+  _id: string;
+  title: string;
+  description: string;
 }

@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import SubscribePopup from "@/components/PopupModal";
 import AboutSection from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import HeroSection from "@/components/sections/HeroSection";

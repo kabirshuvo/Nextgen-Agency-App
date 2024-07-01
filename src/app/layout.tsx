@@ -5,18 +5,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AuthProvider from "@/context/AuthProvider";
-import Head from "next/head";
+// import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Promotopea",
   description: "Promoting Your Online Presence",
+  // icons: {
+  //   icon: "/favicon.ico",
+  // },
 };
 
-<Head>
-  <link rel="icon" href="/favicon.ico" />
-</Head>;
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,11 +26,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <AuthProvider>
         <body className={inter.className}>
-          <ThemeProvider attribute="class" defaultTheme="dark">
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
+          <div className="relative z-50" id="__next">
+            <ThemeProvider attribute="class" defaultTheme="dark">
+              <Header />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </div>
         </body>
       </AuthProvider>
     </html>

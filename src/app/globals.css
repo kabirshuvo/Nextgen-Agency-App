@@ -106,3 +106,9 @@
   .swiper-pagination-bullet {
   @apply bg-primary !important;
 }
+
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
