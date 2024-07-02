@@ -49,18 +49,20 @@ const BlogPostPage = () => {
   return (
     <div className="container mx-auto py-12">
       <h1 className="text-4xl font-bold mb-8">{blogPost.title}</h1>
-      {blogPost.imageUrl && (
-        <Image
-          src={blogPost.imageUrl}
-          alt={blogPost.title}
-          width={400}
-          height={200}
-          priority={blogPost.imageUrl === "/images/adobe-illustrator-cc.svg"}
-        />
-      )}
-      <p>
-        <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
-      </p>
+      <div className="flex flex-col gap-7 justify-center items-center">
+        {blogPost.imageUrl && (
+          <Image
+            src={blogPost.imageUrl}
+            alt={blogPost.title}
+            width={400}
+            height={200}
+            priority={blogPost.imageUrl === "/images/adobe-illustrator-cc.svg"}
+          />
+        )}
+        <p>
+          <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
+        </p>
+      </div>
     </div>
   );
 };
