@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import axios from "axios";
-import { BlogPost } from "@/types/types"; // Adjust the import path as needed
+import { BlogPost } from "@/types/types";
 
 const BlogPostPage = () => {
   const [blogPost, setBlogPost] = useState<BlogPost | null>(null);
@@ -53,12 +53,14 @@ const BlogPostPage = () => {
         <Image
           src={blogPost.imageUrl}
           alt={blogPost.title}
-          width={800}
-          height={400}
+          width={400}
+          height={200}
           priority={blogPost.imageUrl === "/images/adobe-illustrator-cc.svg"}
         />
       )}
-      <p>{blogPost.content}</p>
+      <p>
+        <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
+      </p>
     </div>
   );
 };

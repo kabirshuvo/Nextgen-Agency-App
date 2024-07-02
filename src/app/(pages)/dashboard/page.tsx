@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import WriteBlogPage from "../blog/writeBlog/page"; // Import your pages/components accordingly
+import WriteBlogPage from "../blog/writeBlog/page";
 import AdminUsers from "../../admin/users/page";
 import AdminMessages from "../../admin/messages/page";
 import SettingsPage from "../../admin/settings/page";
 
 const SmartDashboard = () => {
-  const [currentPage, setCurrentPage] = useState<string>("users"); // Default page is "users"
+  const [currentPage, setCurrentPage] = useState<string>("users");
 
   const renderPage = () => {
     switch (currentPage) {

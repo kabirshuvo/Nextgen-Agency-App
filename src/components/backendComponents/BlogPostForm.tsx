@@ -60,9 +60,21 @@ const BlogPostForm = () => {
     }
   };
 
+  const modules = {
+    toolbar: [
+      [{ header: "1" }, { header: "2" }, { font: [] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      ["link", "image", "video"],
+      [{ color: [] }, { background: [] }],
+      [{ align: [] }],
+      ["clean"],
+    ],
+  };
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Card className="max-w-lg w-full mx-4 p-6 shadow-md bg-white">
+    <div className="flex justify-center items-center min-h-screen bg-primary">
+      <Card className="max-w-7xl w-full mx-4 p-6 shadow-md bg-secondary">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold mb-4">
             Create a Blog Post
@@ -71,66 +83,71 @@ const BlogPostForm = () => {
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-4">
             {message && <p className="text-center text-green-500">{message}</p>}
-            <div>
-              <Label
-                htmlFor="title"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Title
-              </Label>
-              <Input
-                type="text"
-                id="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                required
-                className="mt-1 block w-full"
-              />
+            <div className="flex flex-wrap">
+              <div className="w-full lg:w-1/2 px-2">
+                <Label
+                  htmlFor="title"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Title
+                </Label>
+                <Input
+                  type="text"
+                  id="title"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  required
+                  className="mt-1 block w-full"
+                />
+              </div>
+              <div className="w-full lg:w-1/2 px-2">
+                <Label
+                  htmlFor="summary"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Summary
+                </Label>
+                <Textarea
+                  id="summary"
+                  value={summary}
+                  onChange={(e) => setSummary(e.target.value)}
+                  required
+                  className="mt-1 block w-full"
+                />
+              </div>
             </div>
-            <div>
-              <Label
-                htmlFor="summary"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Summary
-              </Label>
-              <Textarea
-                id="summary"
-                value={summary}
-                onChange={(e) => setSummary(e.target.value)}
-                required
-                className="mt-1 block w-full"
-              />
-            </div>
-            <div>
-              <Label
-                htmlFor="content"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Content
-              </Label>
-              <ReactQuill
-                id="content"
-                value={content}
-                onChange={setContent}
-                theme="snow"
-                className="mt-1 block w-full"
-              />
-            </div>
-            <div>
-              <Label
-                htmlFor="imageUrl"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Image URL
-              </Label>
-              <Input
-                type="text"
-                id="imageUrl"
-                value={imageUrl}
-                onChange={(e) => setImageUrl(e.target.value)}
-                className="mt-1 block w-full"
-              />
+            <div className="flex flex-wrap">
+              <div className="w-full lg:w-1/2 px-2">
+                <Label
+                  htmlFor="content"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Content
+                </Label>
+                <ReactQuill
+                  id="content"
+                  value={content}
+                  onChange={setContent}
+                  theme="snow"
+                  modules={modules}
+                  className="mt-1 block w-full"
+                />
+              </div>
+              <div className="w-full lg:w-1/2 px-2">
+                <Label
+                  htmlFor="imageUrl"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Image URL
+                </Label>
+                <Input
+                  type="text"
+                  id="imageUrl"
+                  value={imageUrl}
+                  onChange={(e) => setImageUrl(e.target.value)}
+                  className="mt-1 block w-full"
+                />
+              </div>
             </div>
           </CardContent>
           <CardFooter className="flex justify-end">
