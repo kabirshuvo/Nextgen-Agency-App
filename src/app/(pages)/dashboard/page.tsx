@@ -24,15 +24,15 @@ const SmartDashboard = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen rounded">
       {/* Sidebar */}
-      <aside className="bg-gray-800 text-gray-100 w-1/4">
-        <div className="p-4">
-          <ul className="space-y-4">
+      <aside className="bg-primary/45 my-4 text-gray-100 w-1/6 text-right rounded">
+        <div className="p-4 rounded">
+          <ul className="space-y-4 flex flex-col justify-between items-center text-right rounded">
             <li>
               <button
                 onClick={() => setCurrentPage("users")}
-                className="w-full text-left py-2 px-4 block hover:bg-gray-700"
+                className="w-full text-left py-2 px-4 block hover:bg-gray-700 rounded"
               >
                 Users
               </button>
@@ -40,7 +40,7 @@ const SmartDashboard = () => {
             <li>
               <button
                 onClick={() => setCurrentPage("addBlogs")}
-                className="w-full text-left py-2 px-4 block hover:bg-gray-700"
+                className="w-full text-left py-2 px-4 block hover:bg-gray-700 rounded"
               >
                 Add Blogs
               </button>
@@ -48,7 +48,7 @@ const SmartDashboard = () => {
             <li>
               <button
                 onClick={() => setCurrentPage("messages")}
-                className="w-full text-left py-2 px-4 block hover:bg-gray-700"
+                className="w-full text-left py-2 px-4 block hover:bg-gray-700 rounded"
               >
                 Messages
               </button>
@@ -56,7 +56,7 @@ const SmartDashboard = () => {
             <li>
               <button
                 onClick={() => setCurrentPage("settings")}
-                className="w-full text-left py-2 px-4 block hover:bg-gray-700"
+                className="w-full text-left py-2 px-4 block hover:bg-gray-700 rounded"
               >
                 Settings
               </button>
@@ -64,7 +64,7 @@ const SmartDashboard = () => {
             <li>
               <button
                 onClick={() => setCurrentPage("logout")}
-                className="w-full text-left py-2 px-4 block hover:bg-gray-700"
+                className="w-full text-left py-2 px-4 block hover:bg-gray-700 rounded"
               >
                 Logout
               </button>
@@ -74,7 +74,7 @@ const SmartDashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-4">
+      <main className="flex-1 p-4 rounded">
         {/* Render the selected page */}
         {renderPage()}
       </main>

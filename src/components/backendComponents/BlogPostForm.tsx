@@ -73,23 +73,23 @@ const BlogPostForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-primary">
-      <Card className="max-w-7xl w-full mx-4 p-6 shadow-md bg-secondary">
+    <div className="flex justify-center items-center min-h-screen bg-primary/60">
+      <Card className="max-w-7xl w-full mx-4 p-6 shadow-2xl bg-white/80">
         <CardHeader>
-          <CardTitle className="text-center text-2xl font-bold mb-4">
+          <CardTitle className="text-center text-2xl font-bold mb-4 text-primary">
             Create a Blog Post
           </CardTitle>
         </CardHeader>
         <form onSubmit={handleSubmit}>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 flex flex-col justify-center items-center">
             {message && <p className="text-center text-green-500">{message}</p>}
             <div className="flex flex-wrap">
-              <div className="w-full lg:w-1/2 px-2">
+              <div className="w-full  px-2">
                 <Label
                   htmlFor="title"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Title
+                  Blog Title :
                 </Label>
                 <Input
                   type="text"
@@ -100,7 +100,7 @@ const BlogPostForm = () => {
                   className="mt-1 block w-full"
                 />
               </div>
-              <div className="w-full lg:w-1/2 px-2">
+              <div className="w-full  px-2">
                 <Label
                   htmlFor="summary"
                   className="block text-sm font-medium text-gray-700"
@@ -116,13 +116,28 @@ const BlogPostForm = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap">
-              <div className="w-full lg:w-1/2 px-2">
+            <div className="w-1/2 px-2">
+              <Label
+                htmlFor="imageUrl"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Image URL
+              </Label>
+              <Input
+                type="text"
+                id="imageUrl"
+                value={imageUrl}
+                onChange={(e) => setImageUrl(e.target.value)}
+                className="mt-1 block w-full"
+              />
+            </div>
+            <div className="flex flex-wrap justify-center items-center">
+              <div className="w-full text-center px-2">
                 <Label
                   htmlFor="content"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium bg-black h-5 text-white/80"
                 >
-                  Content
+                  Write Your Blog Content
                 </Label>
                 <ReactQuill
                   id="content"
@@ -130,22 +145,7 @@ const BlogPostForm = () => {
                   onChange={setContent}
                   theme="snow"
                   modules={modules}
-                  className="mt-1 block w-full"
-                />
-              </div>
-              <div className="w-full lg:w-1/2 px-2">
-                <Label
-                  htmlFor="imageUrl"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Image URL
-                </Label>
-                <Input
-                  type="text"
-                  id="imageUrl"
-                  value={imageUrl}
-                  onChange={(e) => setImageUrl(e.target.value)}
-                  className="mt-1 block w-full"
+                  className="mt-1 block w-full text-black h-56"
                 />
               </div>
             </div>
