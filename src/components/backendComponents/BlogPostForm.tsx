@@ -97,7 +97,7 @@ const BlogPostForm = () => {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   required
-                  className="mt-1 block w-full"
+                  className="mt-1 block w-full bg-primary/80"
                 />
               </div>
               <div className="w-full  px-2">
@@ -112,7 +112,7 @@ const BlogPostForm = () => {
                   value={summary}
                   onChange={(e) => setSummary(e.target.value)}
                   required
-                  className="mt-1 block w-full"
+                  className="mt-1 block w-full bg-primary/80"
                 />
               </div>
             </div>
@@ -128,14 +128,14 @@ const BlogPostForm = () => {
                 id="imageUrl"
                 value={imageUrl}
                 onChange={(e) => setImageUrl(e.target.value)}
-                className="mt-1 block w-full"
+                className="mt-1 block w-full bg-primary/80"
               />
             </div>
             <div className="flex flex-wrap justify-center items-center">
               <div className="w-full text-center px-2">
                 <Label
                   htmlFor="content"
-                  className="block text-sm font-medium bg-black h-5 text-white/80"
+                  className="block text-sm font-medium bg-primary/80 text-white/80"
                 >
                   Write Your Blog Content
                 </Label>
