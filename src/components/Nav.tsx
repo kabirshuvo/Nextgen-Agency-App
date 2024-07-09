@@ -5,11 +5,10 @@ import AuthButton from "./AuthButton";
 
 const links = [
   { path: "/", name: "home" },
+  { path: "/about", name: "about" },
   { path: "/design", name: "design" },
-  { path: "/development", name: "development" },
-  { path: "/optimization", name: "optimization" },
+  { path: "/projects", name: "Developments" },
   { path: "/blog", name: "blog" },
-  { path: "/projects", name: "projects" },
   { path: "/contact", name: "contact" },
 ];
 
