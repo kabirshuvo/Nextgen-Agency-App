@@ -22,8 +22,8 @@ export default function DesignDetail() {
         <Image
           src={image.src}
           alt={image.title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          width={400}
+          height={200}
           style={{ objectFit: "cover" }}
         />
       </div>
