@@ -51,3 +51,12 @@ export interface Optimization {
   title: string;
   description: string;
 }
+
+export type ImageData1 = {
+  id: number;
+  title: string;
+  src: string;
+  alt: string;
+  description: string;
+  category: string;
+};

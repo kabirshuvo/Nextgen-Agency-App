@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "../../../data/index";
+import Contact from "@/components/sections/Contact";
 
 export default function DesignDetail() {
   const params = useParams();
@@ -22,12 +23,15 @@ export default function DesignDetail() {
         <Image
           src={image.src}
           alt={image.title}
-          width={400}
-          height={200}
+          width={800}
+          height={400}
           style={{ objectFit: "cover" }}
         />
       </div>
       <p className="text-lg mb-4">{image.description}</p>
+      <div>
+        <Contact />
+      </div>
       <Link href="/design" className="text-blue-500 hover:underline">
         Back to Gallery
       </Link>

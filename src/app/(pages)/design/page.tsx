@@ -29,7 +29,7 @@ export default function DesignGallery() {
               <Link href={`/design/${image.id}`}>
                 <ImageCard image={image} />
               </Link>
-              <div className="text-right">{image.description}</div>
+              <div className="text-right">{image.category}</div>
             </div>
           ))}
         </div>
