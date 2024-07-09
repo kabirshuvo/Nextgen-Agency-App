@@ -7,7 +7,6 @@ type ImageData = {
   src: string;
   alt: string;
   description: string;
-  link: string;
 };
 
 interface ImageCardProps {

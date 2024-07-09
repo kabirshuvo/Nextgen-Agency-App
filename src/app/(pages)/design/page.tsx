@@ -26,7 +26,7 @@ export default function DesignGallery() {
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 mx-auto p-4">
           {images.map((image) => (
             <div key={image.id} className="break-inside-avoid">
-              <Link href={image.link}>
+              <Link href={`/design/${image.id}`}>
                 <ImageCard image={image} />
               </Link>
               <div className="text-right">{image.description}</div>
