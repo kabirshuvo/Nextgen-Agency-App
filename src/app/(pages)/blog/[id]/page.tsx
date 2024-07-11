@@ -48,8 +48,7 @@ const BlogPostPage = () => {
 
   return (
     <div className="container mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-8">{blogPost.title}</h1>
-      <div className="flex gap-7 justify-center items-center">
+      <div className="flex flex-col gap-7 justify-center items-center">
         {blogPost.imageUrl && (
           <Image
             src={blogPost.imageUrl}
@@ -59,6 +58,9 @@ const BlogPostPage = () => {
             priority={blogPost.imageUrl === "/images/adobe-illustrator-cc.svg"}
           />
         )}
+        <h1 className="text-4xl text-center font-bold mb-8">
+          {blogPost.title}
+        </h1>
         <p>
           <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
         </p>

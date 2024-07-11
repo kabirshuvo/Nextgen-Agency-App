@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const Contact = () => {
   return (
-    <section className="h-[40vh]">
+    <section className="h-[40vh] my-16">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           <h2 className="h2 max-w-3xl text-center mb-8 xl:my-16">

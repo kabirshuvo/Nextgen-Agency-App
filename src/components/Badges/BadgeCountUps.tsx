@@ -5,7 +5,7 @@ export const YearsCountUp = () => {
   return (
     <BadgeCountUp
       endCountNum={16}
-      endCountText="K"
+      endCountText=""
       badgeText="Years of Experience"
     />
   );

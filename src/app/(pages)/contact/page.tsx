@@ -3,8 +3,8 @@ import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 
 const ContactPage = () => {
   return (
-    <section>
-      <div className="container ma-auto">
+    <section className="">
+      <div className="container mx-auto ">
         <div className="grid md:grid-cols-2 pt-12 md:h-[480px] mb-6 md:mb-24">
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">

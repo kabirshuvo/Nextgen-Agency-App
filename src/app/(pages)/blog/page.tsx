@@ -56,7 +56,9 @@ const BlogPage = () => {
 
   return (
     <div className="container mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold mb-8 text-center">Blog</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">
+        Promotopea Recent Blogs
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentPosts.map((post: BlogPost) => (
           <Card
@@ -73,21 +75,26 @@ const BlogPage = () => {
                 </Link>
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-grow">
-              {post.imageUrl && (
-                <div className="w-full mb-4 overflow-hidden rounded-md">
-                  <Image
-                    src={post.imageUrl}
-                    alt={post.title}
-                    width={400}
-                    height={225}
-                    layout="responsive"
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-              )}
-              <p className="text-sm text-gray-600">{post.summary}</p>
-            </CardContent>
+            <Link
+              href={`/blog/${post._id}`}
+              className="group-hover:text-blue-600 transition-colors"
+            >
+              <CardContent className="flex-grow">
+                {post.imageUrl && (
+                  <div className="w-full mb-4 overflow-hidden rounded-md">
+                    <Image
+                      src={post.imageUrl}
+                      alt={post.title}
+                      width={400}
+                      height={225}
+                      layout="responsive"
+                      className="transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                )}
+                <p className="text-sm text-gray-600">{post.summary}</p>
+              </CardContent>
+            </Link>
             <CardFooter>
               <Link
                 href={`/blog/${post._id}`}
