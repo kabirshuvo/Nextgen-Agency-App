@@ -12,21 +12,21 @@ const AboutUs = () => {
     {
       name: "Iffath Zuairia",
       avater: "/images/IffathZuairiaAvater.jpg",
-      role: "Figma Designer",
+      role: "UI/UX Designer, Asthetic Art Dirrector",
       expertise: "Figma, UI/UX Design, Illustration, Gif Animation",
     },
     {
       name: "Kabir Shuvo",
       avater: "/images/KabirShuvoAvater.jpg",
-      role: "Tech Team Lead",
+      role: "Problem Solver, Motivator, Idea Sustainability Analyst",
       expertise:
-        "Next.js, Web Developer, Software Engineering, Back-end Development,",
+        "Next.js, Web Developer, Software Engineering, Back-end Development",
     },
     {
       name: "Solaiman Badsha",
       avater: "/images/SolaimanBadsha.jpg",
-      role: "Fullstack Web Developer",
-      expertise: "Fullstack Web Developer, Front-end Specialist, Leader",
+      role: "UI/UX SPECIALIST, Fullstack, Team Lead",
+      expertise: "Fullstack Web Developer, Front-end Specialist,",
     },
     {
       name: "Annisha Siddika",
