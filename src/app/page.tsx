@@ -7,6 +7,7 @@ import PreviousWorks from "@/components/sections/PreviousWorks";
 import Reviews from "@/components/sections/Reviews";
 import ServicesSection from "@/components/sections/Services";
 import BlogPage from "./(pages)/blog/page";
+import Counter from "@/components/Counter";
 
 export default function Home() {
   return (
