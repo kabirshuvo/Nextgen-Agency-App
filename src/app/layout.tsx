@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AuthProvider from "@/context/AuthProvider";
+import Providers from "@/context/Providers";
 // import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,8 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <AuthProvider>
-        <body className={inter.className}>
+      <body className={inter.className}>
+        <Providers>
           <div className="relative z-50" id="__next">
             <ThemeProvider attribute="class" defaultTheme="dark">
               <Header />
@@ -33,8 +34,8 @@ export default function RootLayout({
               <Footer />
             </ThemeProvider>
           </div>
-        </body>
-      </AuthProvider>
+        </Providers>
+      </body>
     </html>
   );
 }
