@@ -6,16 +6,16 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AuthProvider from "@/context/AuthProvider";
 import Providers from "@/context/Providers";
-// import Head from "next/head";
+import { SessionSync } from "@/components/redux/SessionSync";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import Loading from "@/components/Loading";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Promotopea",
   description: "Promoting Your Online Presence",
-  // icons: {
-  //   icon: "/favicon.ico",
-  // },
 };
 
 export default function RootLayout({
@@ -26,15 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Providers>
-          <div className="relative z-50" id="__next">
-            <ThemeProvider attribute="class" defaultTheme="dark">
-              <Header />
-              {children}
-              <Footer />
-            </ThemeProvider>
-          </div>
-        </Providers>
+        <ErrorBoundary>
+          <Providers>
+            <SessionSync />
+            <div className="relative z-50" id="__next">
+              <ThemeProvider attribute="class" defaultTheme="dark">
+                <Header />
+                <Suspense fallback={<Loading />}>{children}</Suspense>
+                <Footer />
+              </ThemeProvider>
+            </div>
+          </Providers>
+        </ErrorBoundary>
       </body>
     </html>
   );
