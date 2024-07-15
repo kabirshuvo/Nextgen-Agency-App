@@ -168,7 +168,7 @@ const AboutSection = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col xl:flex-row gap-8">
+      <div className="flex flex-col xl:flex-row gap-16">
         <div className="hidden xl:flex flex-1 relative justify-center items-center">
           <div>
             <video
@@ -183,16 +183,16 @@ const AboutSection = () => {
         </div>
 
         <div className="flex-1">
-          <Tabs defaultValue="about">
+          <Tabs defaultValue="services">
             <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-              <TabsTrigger className="w-[162px] xl:w-auto" value="about">
-                Info
-              </TabsTrigger>
               <TabsTrigger className="w-[162px] xl:w-auto" value="services">
                 Services
               </TabsTrigger>
               <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
                 Skills
+              </TabsTrigger>
+              <TabsTrigger className="w-[162px] xl:w-auto" value="about">
+                Info
               </TabsTrigger>
             </TabsList>
             <div className="text-lg mt-12 xl:mt-8">
@@ -221,22 +221,20 @@ const AboutSection = () => {
               </TabsContent>
               <TabsContent value="services">
                 <div>
-                  <h3 className="h3 mb-8 text-center xl:text-left">
-                    Our Experienced Services
-                  </h3>
-                  <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                    Transforming visions into reality with top-notch services
-                    that elevate your business and ignite your success journey.
-                  </p>
                   <div>
-                    <div className="flex gap-x-4 items-center h4 text-primary">
-                      <Briefcase />
-                      <div className="capitalize font-medium">
+                    <div className="flex flex-col gap-y-4 items-start h4 text-primary">
+                      <div className="capitalize font-medium flex justify-center gap-1 items-center">
+                        <Briefcase />
                         {
                           getData(servicesData, "Our Services at a glance")
                             .title
                         }
                       </div>
+                      <p className="subtitle max-w-xl mx-auto xl:mx-0">
+                        Transforming visions into reality with top-notch
+                        services that elevate your business and ignite your
+                        success journey.
+                      </p>
                     </div>
                     <div>
                       {getData(servicesData, "Services").data.map(
