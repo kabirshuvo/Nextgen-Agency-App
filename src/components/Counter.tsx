@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
-import { increment, decrement } from "../store/exampleSlice";
+import { increment, decrement } from "../store/slices/exampleSlice";
 import { useSession } from "next-auth/react";
 
 export default function Counter() {

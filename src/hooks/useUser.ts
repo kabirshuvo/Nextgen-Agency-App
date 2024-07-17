@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "./hooks";
-import { setUser, clearUser } from "../store/userSlice";
+import { setUser, clearUser } from "../store/slices/userSlice";
 
 export const useUser = () => {
   const dispatch = useAppDispatch();

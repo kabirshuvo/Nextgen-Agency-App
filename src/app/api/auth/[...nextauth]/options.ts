@@ -1,4 +1,4 @@
-// auth/[...nextauth].ts
+// src/app/api/auth/[...nextauth]/option.ts
 
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -58,11 +58,13 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token._id = user._id?.toString(); // Convert ObjectId to string
+        token._id = user._id?.toString();
         token.isVerified = user.isVerified;
         token.isAcceptingMessages = user.isAcceptingMessages;
         token.username = user.username;
-        token.isAdmin = user.isAdmin; // Add isAdmin property
+        token.isAdmin = user.isAdmin;
+        token.diamonds = user.diamonds || 300;
+        token.lastDiamondUpdate = user.lastDiamondUpdate || Date.now();
       }
       return token;
     },
@@ -72,7 +74,9 @@ export const authOptions: NextAuthOptions = {
         session.user.isVerified = token.isVerified;
         session.user.isAcceptingMessages = token.isAcceptingMessages;
         session.user.username = token.username;
-        session.user.isAdmin = token.isAdmin; // Add isAdmin property
+        session.user.isAdmin = token.isAdmin;
+        session.user.diamonds = token.diamonds;
+        session.user.lastDiamondUpdate = token.lastDiamondUpdate;
       }
       return session;
     },

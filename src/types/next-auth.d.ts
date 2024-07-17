@@ -10,6 +10,8 @@ declare module "next-auth" {
       isAcceptingMessages?: boolean;
       username?: string;
       isAdmin?: boolean;
+      diamonds?: number;
+      lastDiamondUpdate?: number;
     } & DefaultSession["user"];
   }
 
@@ -19,6 +21,8 @@ declare module "next-auth" {
     isAcceptingMessages?: boolean;
     username?: string;
     isAdmin?: boolean;
+    diamonds?: number;
+    lastDiamondUpdate?: number;
   }
 }
 
@@ -29,5 +33,7 @@ declare module "next-auth/jwt" {
     isAcceptingMessages?: boolean;
     username?: string;
     isAdmin?: boolean;
+    diamonds?: number;
+    lastDiamondUpdate?: number;
   }
 }

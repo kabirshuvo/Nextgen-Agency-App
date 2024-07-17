@@ -27,9 +27,11 @@ export interface User extends Document {
   verifyCode: string;
   isVerified: boolean;
   verifyCodeExpiry: Date;
-  isAdmin: boolean; // Corrected definition for isAdmin
-  isAcceptingMessages?: boolean; // Corrected definition for isAcceptingMessages
+  isAdmin: boolean;
+  isAcceptingMessages?: boolean;
   messages?: Message[];
+  diamonds: number;
+  lastDiamondUpdate: Date;
 }
 
 // Define the User schema
@@ -50,9 +52,11 @@ const UserSchema: Schema<User> = new Schema<User>({
   verifyCode: { type: String, required: [true, "Verify code is Required"] },
   isVerified: { type: Boolean, default: false },
   verifyCodeExpiry: { type: Date, required: true },
-  isAdmin: { type: Boolean, default: false }, // Corrected definition for isAdmin
-  isAcceptingMessages: { type: Boolean, default: true }, // Corrected definition for isAcceptingMessages
+  isAdmin: { type: Boolean, default: false },
+  isAcceptingMessages: { type: Boolean, default: true },
   messages: [MessageSchema],
+  diamonds: { type: Number, default: 300 },
+  lastDiamondUpdate: { type: Date, default: Date.now },
 });
 
 // Define and export the User model
