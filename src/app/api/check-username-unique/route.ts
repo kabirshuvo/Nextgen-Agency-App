@@ -1,7 +1,10 @@
+//api/check-username-unique/route.ts
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/models/User.model";
 import { z } from "zod";
 import { userNameValidation } from "@/schemas/signUpSchema";
+
+export const dynamic = "force-dynamic";
 
 const UsernameQuerySchema = z.object({
   username: userNameValidation,

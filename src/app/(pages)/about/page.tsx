@@ -5,32 +5,32 @@ const AboutUs = () => {
   const teamMembers = [
     {
       name: "Kawser Santo",
-      avater: "/images/kawsersantoAvater.jpg",
+      avater: "/avater/user_avatar5.png",
       role: "Graphic Design Team Lead",
       expertise: "Adobe Illustrator, Book Illustration, Technical Drawing",
     },
     {
       name: "Iffath Zuairia",
-      avater: "/images/IffathZuairiaAvater.jpg",
+      avater: "/avater/user_avatar2.png",
       role: "UI/UX Designer, Asthetic Art Dirrector",
       expertise: "Figma, UI/UX Design, Illustration, Gif Animation",
     },
     {
       name: "Kabir Shuvo",
-      avater: "/images/KabirShuvoAvater.jpg",
+      avater: "/avater/user_avatar.jpg",
       role: "Problem Solver, Motivator, Idea Sustainability Analyst",
       expertise:
         "Next.js, Web Developer, Software Engineering, Back-end Development",
     },
     {
       name: "Solaiman Badsha",
-      avater: "/images/SolaimanBadsha.jpg",
+      avater: "/avater/user_avatar4.jpg",
       role: "UI/UX SPECIALIST, Fullstack, Team Lead",
       expertise: "Fullstack Web Developer, Front-end Specialist,",
     },
     {
       name: "Annisha Siddika",
-      avater: "/images/AnnishaSiddikaAvater.jpg",
+      avater: "/avater/user_avatar1.png",
       role: "Front-end Specialist",
       expertise:
         "Web Development, Front-end Specialist, Typescript, Web Animation, Responsiveness",
@@ -38,7 +38,7 @@ const AboutUs = () => {
 
     {
       name: "Rabbil Hasan",
-      avater: "/images/RabbilHasanAvater.jpg",
+      avater: "/avater/user_avatar3.png",
       role: "SEO Specialist",
       expertise:
         "Search Engine Optimization, Social Media Marketing and In depth Research",
@@ -86,9 +86,12 @@ const AboutUs = () => {
         <h2 className="text-2xl font-semibold mb-4 text-orange-600">
           Our Team
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {teamMembers.map((member, index) => (
-            <div key={index} className="bg-primary/20 shadow-md rounded-lg p-6">
+            <div
+              key={index}
+              className="bg-primary/20 shadow-md rounded-lg p-6 transition-transform duration-300 hover:scale-105"
+            >
               <div className="flex justify-between relative">
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                 <div className="absolute top-0 right-0">
@@ -97,8 +100,8 @@ const AboutUs = () => {
                     alt={member.name}
                     width={40}
                     height={25}
-                    layout="responsive"
-                    className="transition-transform duration-300 hover:scale-105 rounded-full"
+                    // layout="responsive"
+                    className="transition-transform duration-300 hover:scale-105 rounded-full -mt-8"
                   />
                 </div>
               </div>
