@@ -100,8 +100,7 @@ const AboutUs = () => {
                     alt={member.name}
                     width={40}
                     height={25}
-                    // layout="responsive"
-                    className="transition-transform duration-300 hover:scale-105 rounded-full -mt-8"
+                    className="transition-transform duration-300 hover:scale-105 rounded-full -mt-8 "
                   />
                 </div>
               </div>
