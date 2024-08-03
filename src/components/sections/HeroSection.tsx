@@ -10,6 +10,7 @@ import ReviewsBadge from "../Badges/ReviewsBadge";
 import HeroTexts from "./HeroTexts";
 import OffersButton from "../buttons/OffersButton";
 import Brands from "../Brands";
+import PromotionId from "../SubscriptionForm";
 
 const HeroSection = () => {
   return (
@@ -49,8 +50,13 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex absolute left-2/4 bottom-24 xl:bottom-4 animate-bounce">
-          <RiArrowDownSLine className="text-3xl text-primary" />
+        <div className="hidden md:flex  absolute left-2/4  bottom-0 animate-bounce -ml-16">
+          <Link href="/subscribe">
+            <button className="flex flex-col justify-center items-center">
+              <p className="text-primary"> Subscribe Now</p>
+              <RiArrowDownSLine className="text-3xl text-primary" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>
