@@ -140,8 +140,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 For any queries or support, please contact us at:
 
-- Email: support@promotopea.com
-- Website: [https://www.promotopea.com](https://www.promotopea.com)
+- Email: kabirshuvo19@gmail.com
+- Website: [https://www.promotopea.com](https://promotopea.vercel.app/)
 
 ---
 
