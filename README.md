@@ -61,6 +61,9 @@ Create a `.env.local` file in the root directory and add necessary variables:
 DATABASE_URL=your_mongodb_url
 NEXTAUTH_SECRET=your_nextauth_secret
 RESEND_API_KEY=your_resend_api_key
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+TOKEN_SECRET=
 
 4. **Run the development server**
    npm run dev
